@@ -1,0 +1,7 @@
+\80 --> Tabulación
+
+Para entregar datos correspondientes a cada comando se utiliza %s
+Ejemplo
+;;TimeRunning
+...(Codigo)....
+\01 %s

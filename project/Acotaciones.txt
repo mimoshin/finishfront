@@ -1,0 +1,22 @@
+pygame.key.set_repeat(500, 250)
+set_repeat() -> None
+set_repeat(delay, interval) -> None
+
+verifica si una tecla sigue apretada con X delay y repite la accion en Y intervalo.
+"""
+recep = True
+x = Serie(F.listar_Archivos()[0])
+for a in x.Atletas:
+    print a.puesto,a.ide,a.pista,a.nombre,a.marca,a.club
+    
+while recep:
+    dato = raw_input("Opcion: ")
+    if dato == 'p':
+        pass
+    elif dato == 'a':
+        x.actualizar()
+        for a in x.Atletas:
+                print a.puesto,a.ide,a.pista,a.nombre,a.marca,a.club
+    else:
+        recep = False
+"""
