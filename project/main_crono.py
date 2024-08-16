@@ -22,7 +22,7 @@ def connection(server_address):
             print("...conectando")
             socket.setdefaulttimeout(1)
             sock.connect(server_address)
-            sock.settimeout(0.0200)
+            sock.settimeout(0.0001)
             if sock:
                 print (f"Conexion establecida: IP -> {ip} | PORT -> {port}")
                 return sock
@@ -47,7 +47,7 @@ def main():
     baner_prueba,baner_tiempo = True,True
     pantalla = pygame.display.set_mode((1920,1080),pygame.FULLSCREEN)
     
-    img_crono = load_image("./img/BANNER CRONOMETRO-Valpo.png",True)
+    img_crono = load_image("./img/BANNER CRONOMETRO.png",True)
     img_no_oficial =  load_image("./img/banner no oficial.png",True)
     img_titulo = load_image("./img/banner_titulo-Valpo.png",True)
     no_oficial = load_image("./img/tiempo_no_oficial-Valpo.png",True)
@@ -113,7 +113,8 @@ def main():
                     TNF = True
                     print(time)
                 else:
-                    print("Else: ",datos.split('\n'))                
+                    pass
+                    #print("Else: ",datos.split('\n'))                
         except socket.timeout:
             pass
         except:
@@ -132,7 +133,7 @@ def main():
                 TNF = False
                 
             tiempo = pygame.font.Font.render(pygame.font.Font("config/arial.ttf", 120),time, 1,(0,0,0))
-            pantalla.blit(img_crono,(1100,850)) #baner del tiempo
+            pantalla.blit(img_crono,(1200,830)) #baner del tiempo
             pantalla.blit(tiempo,(1300,900)) # tiempo corriendo
                 
         if baner_prueba:
